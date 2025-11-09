@@ -1,0 +1,477 @@
+/* 基本スタイル */
+html {
+    font-size: 62.5%; /* 1rem = 10px に統一 */
+    scroll-behavior: smooth;
+}
+
+header {
+  border-bottom: 0.35rem solid #c9c9c9; /* 薄いグレーの線 */
+  padding-bottom: 1rem;          /* 下に少し余白 */
+  margin-bottom: 1rem;           /* 本文との間隔 */
+}
+
+footer {
+  border-top: 0.35rem solid #c9c9c9; /* 薄いグレーの線 */
+  padding-top: 1rem;          /* 下に少し余白 */
+  margin-top: 1rem;           /* 本文との間隔 */
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);     /* コンテンツ幅の中央から左にずらす */
+}
+
+/* ヘッダー */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7.5rem;
+  /*background-color: transparent;*/
+  background-color: #FFFFFF;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 999;
+}
+
+.logo {
+  height: 6rem;
+  width: auto;
+}
+
+.menu {
+  display: none;
+}
+
+.right-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-right: 4rem;
+} 
+
+.menu-label {
+  position: relative;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem; /*三の行間*/
+  cursor: pointer; /*カーソルを当てるとマウスアイコンが変わる*/
+}
+
+
+.menu-label span {
+  background: #333;
+  height: 0.2rem;
+  width: 100%;
+  transition: 0.3s; /*×に切り替わるスピード*/
+}
+
+/* メニュー変形（ハンバーガー → ×） */
+.menu:checked ~ .menu-label span:nth-child(1) {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 1.2rem;
+}
+.menu:checked ~ .menu-label span:nth-child(2) {
+  opacity: 0;
+}
+.menu:checked ~ .menu-label span:nth-child(3) {
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 1.2rem;
+}
+
+
+/* 右から出るメニュー */
+.nav {
+  position: fixed;
+  top: 7.85rem;             /* ← ヘッダーの高さにぴったり合わせる！ */
+  right: 0;
+  width: 30%;
+  height: calc(100vh - 6rem); /* ヘッダーの下に収めたい場合の補助設定 */
+  transform: translateX(100vw);
+  transition: transform 0.3s ease;
+  background: #3EB370;
+  padding: 0 5rem;
+  z-index: 998;
+  overflow-y: auto; /* スクロール対応を追加 */
+}
+
+/* メニュー表示時 */
+.menu:checked ~ .nav {
+  transform: translateX(0);
+}
+
+.nav a {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: block;
+  /*padding: 1rem 0;*/
+  display: block;              /* ブロック要素にすることで幅いっぱいに */
+  /*padding-bottom: 0.5rem;      /* 下線との間隔を調整（任意） */
+  font-size: 3rem;
+}
+
+.nav-main a {
+  padding: 1rem 0;
+  padding-bottom: 0.5rem;
+}
+
+.space {
+  margin-top: 3rem;
+}
+
+.nav a:hover {
+  background: #ddd;
+}
+
+.small {
+  margin-top: 27rem;
+}
+
+.nav-sub a {
+  text-decoration: none;
+  display: block;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+
+/* リンクに下線を追加 */
+.nav a.underline {
+  display: block;              /* ブロック要素にすることで幅いっぱいに */
+  border-bottom: 0.2rem solid #333; /* 下線の太さと色を指定 */
+  padding-bottom: 0.5rem;      /* 下線との間隔を調整（任意） */
+  font-size: 3rem;
+  pointer-events: none;
+}
+
+.nav::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+/* メニュースクロール */
+.nav::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 0.4rem;
+}
+
+/* メニュースクロールの残り部分 */
+.nav::-webkit-scrollbar-track {
+  background-color: #f4f4f4;
+}
+
+/* メニューのすべての商品押下で遷移 */
+#about-trahearce,
+#topic,
+#products,
+#about-trampoline,
+#place-trampoline {
+  scroll-margin-top: 10rem; /* ヘッダーの高さに合わせて調整 */
+}
+
+
+/*イラスト予定*/
+.image_1 {
+  width: calc(100% - 6rem);
+  height: auto;
+  display: block;
+  margin: 0 7rem;
+  margin-top: 12.85rem;
+  margin-bottom: 10rem;
+}
+
+.image_2 {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 各タイトル */
+.brand,
+.topic,
+.products,
+.trampoline,
+.map-title {
+  padding: 0 7rem;
+  font-size: 5rem;
+}
+
+/* trahearceの説明 */
+.egg {
+  text-align: center;
+  line-height: 2.3;
+  font-size: 2rem;
+  margin-top: 5rem;
+}
+
+/* trahearceの写真 */
+.brand-photo-wrapper {
+  text-align: center;
+  margin: 8rem 0;
+}
+
+.brand-photo-wrapper img {
+  width: 70%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.topic-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  background-color: #f5f5f5;
+}
+
+.topic-list {
+  list-style-type: disc;
+  list-style-position: inside;
+  font-size: 2rem;
+  margin: 0;
+  padding-top: 3rem;
+  padding-left: 47rem;
+  padding-bottom: 10rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+.topic-list li {
+  margin-bottom: 0.8rem;
+}
+
+/* 最初の項目だけ Topic と高さを揃えて横並びに見せる */
+.topic-list li:first-child {
+  margin-top: 0.5rem;
+}
+
+.list-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 横3列 */
+  gap: 2rem; /* カード間の余白 */
+  padding: 0 7rem;
+}
+
+.list {
+  background-color: transparent; /* 背景を透明に */
+  border: none;                  /* 枠線を消す */
+  border-radius: 0;              /* 角丸をなくす */
+  box-shadow: none;              /* 影を消す */
+  padding: 0;                    /* 内側の余白をなくす */
+  transition: none;              /* ホバー時の変化もなくす */
+  text-align: center;
+}
+
+.list:hover {
+  transform: scale(1.03);
+}
+
+.list img {
+  display: inline-block;
+  width: 70%;
+  height: auto;
+  border-radius: 0.4rem;
+}
+
+.text h4 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.1em;
+}
+
+.text p {
+  margin: 0;
+  margin-bottom: 2rem; /* ← 下に20pxの余白 */
+  font-size: 0.95em;
+  color: #333;
+}
+
+.more-button-area {
+  display: flex;
+  justify-content: center;   /* 横方向中央揃え */
+  align-items: center;       /* 高さ方向中央揃え（任意） */
+  margin: 40px 0;
+  width: 100%;               /* 念のため幅を指定 */
+}
+
+.more-button {
+  background-color: #f7c87d;
+  color: #333;
+  border: none;
+  padding: 12px 48px;
+  font-size: 1.5em;
+  border-radius: 2.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.more-button:hover {
+  background-color: #d6b380e7;
+}
+
+
+
+
+
+
+.map {
+  position: relative;
+  width: 80rem;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.map-image {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  padding-bottom: 7rem;
+  padding-top: 3rem;
+}
+
+.kyoto-label,
+.Osaka-label,
+.Nara-label,
+.Shiga-label,
+.Hyogo-label,
+.Mie-label,
+.Wakayama-label {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.705); /*ラベルの色*/
+  padding: 0.2rem 0.6rem;             /*ラベルの内側余白*/
+  border-radius: 0.6rem;           /*角の丸み*/
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: bold;
+  box-shadow: 0 0.2rem 0.6rem rgba(0,0,0,0.1);  /*ラベルの影の色*/
+}
+
+.popup-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.8rem;
+  padding: 5rem;
+  width: 70rem;
+  box-shadow: 0 0.8rem 2rem rgba(0,0,0,0.2);
+  display: none;
+  z-index: 100;
+}
+
+.popup-row {
+  display: flex;
+  gap: 1.6rem;
+  justify-content: center;
+  margin-top: 1rem;
+  flex-wrap: wrap; /* スマホ対応で折り返し可能に */
+}
+
+.popup-item {
+  width: 100rem;
+  text-align: center;
+}
+
+.popup-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.6rem;
+  box-shadow: 0 0.2rem 0.6rem rgba(0,0,0,0.1);
+}
+
+.label {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 0.6rem;
+}
+
+#popup-title {
+  margin-top: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: bold;  
+  text-align: center;
+}
+
+/*×ボタン設定*/
+.close-btn {
+  position: absolute;
+  top: 0.6rem;
+  right: 1rem;
+  font-size: 4rem; /*大きさ*/
+  color: #666;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* フッター */
+.site-footer {
+  background-color: #FFFFFF;
+  height: 30rem;
+  padding: 3rem 4rem 0 4rem;
+  text-align: left;
+}
+
+.footer-links,
+.footer-information {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* ← これを残す！ */
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-content {
+  display: flex;
+  align-items: flex-start; /* 上寄せ */
+  gap: 15rem ; /* ロゴとリンク群の間隔 */
+}
+
+.footer-links a {
+  color: #000000;/* フォントカラー*/
+  text-decoration: none;
+  font-size: 2rem;
+  margin-left: 34rem;
+}
+  
+.footer-information a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.6rem;
+  padding-right: 7rem;
+}
+
+.footer-links a:hover,
+.footer-information a:hover {
+  text-decoration: underline;
+}
+
+/*著作権*/
+.copyright{
+  text-align: center;
+  font-size: 1.4rem;
+  color: #333;
+  margin-top: 9rem; /* 上のセクションとの余白 */
+}
+
+
+
