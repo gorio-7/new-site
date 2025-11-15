@@ -49,9 +49,22 @@ footer {
   z-index: 999;
 }
 
+/* タイトル（ロゴ＋テキスト） */
+.site-title {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
 .logo {
   height: 6rem;
   width: auto;
+}
+
+.site-name{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
 }
 
 .menu {
@@ -65,6 +78,20 @@ footer {
   margin-right: 4rem;
 } 
 
+/* アイコンサイズ統一 */
+.user-icon,
+.cart-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+}
+
+.user-icon:hover,
+.cart-icon:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
 .menu-label {
   position: relative;
   width: 2.4rem;
@@ -75,6 +102,7 @@ footer {
   align-items: center;
   gap: 0.6rem; /*三の行間*/
   cursor: pointer; /*カーソルを当てるとマウスアイコンが変わる*/
+  margin-left: 1rem;
 }
 
 .menu-label span {
@@ -218,9 +246,9 @@ main {
 }
 
 .item_text {
-  max-width: 600px;
+  max-width: 540px;
   font-size: 1.6rem;
-  line-height: 1.2;
+  line-height: 0.8;
   margin-top: 12rem;
 }
 
@@ -233,3 +261,10 @@ main {
   font-size: 2.5rem;
 }
 
+.space {
+  margin-bottom: 4rem;
+}
+
+.item_explanation {
+  line-height: 1.8;
+}
