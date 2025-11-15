@@ -1,0 +1,235 @@
+/* 基本スタイル */
+html {
+    font-size: 62.5%; /* 1rem = 10px に統一 */
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header {
+  border-bottom: 0.35rem solid #c9c9c9; /* 薄いグレーの線 */
+  padding-bottom: 1rem;          /* 下に少し余白 */
+  margin-bottom: 1rem;           /* 本文との間隔 */
+}
+
+footer {
+  border-top: 0.35rem solid #c9c9c9; /* 薄いグレーの線 */
+  padding-top: 1rem;          /* 下に少し余白 */
+  margin-top: 1rem;           /* 本文との間隔 */
+  width: 100%;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+ /* 画像のはみ出し防止 */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+/* ヘッダー */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7.5rem;
+  background-color: #FFFFFF;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 999;
+}
+
+.logo {
+  height: 6rem;
+  width: auto;
+}
+
+.menu {
+  display: none;
+}
+
+.right-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-right: 4rem;
+} 
+
+.menu-label {
+  position: relative;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem; /*三の行間*/
+  cursor: pointer; /*カーソルを当てるとマウスアイコンが変わる*/
+}
+
+.menu-label span {
+  background: #333;
+  height: 0.2rem;
+  width: 100%;
+  transition: 0.3s; /*×に切り替わるスピード*/
+}
+
+/* メニュー変形（ハンバーガー → ×） */
+.menu:checked ~ .menu-label span:nth-child(1) {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 1.2rem;
+}
+.menu:checked ~ .menu-label span:nth-child(2) {
+  opacity: 0;
+}
+.menu:checked ~ .menu-label span:nth-child(3) {
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 1.2rem;
+}
+
+/* 右から出るメニュー */
+.nav {
+  position: fixed;
+  top: 7.85rem;             /* ← ヘッダーの高さにぴったり合わせる！ */
+  right: 0;
+  width: 30%;
+  height: calc(100vh - 6rem); /* ヘッダーの下に収めたい場合の補助設定 */
+  transform: translateX(100vw);
+  transition: transform 0.3s ease;
+  background: #3EB370;
+  padding: 0 3rem;
+  z-index: 998;
+  overflow-y: auto; /* スクロール対応を追加 */
+}
+
+/* メニュー表示時 */
+.menu:checked ~ .nav {
+  transform: translateX(0);
+}
+
+.nav a {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: block;
+  display: block;              /* ブロック要素にすることで幅いっぱいに */
+  font-size: 3rem;
+}
+
+.nav-main a {
+  padding: 1rem 0;
+  padding-bottom: 0.5rem;
+}
+
+.space {
+  margin-top: 1rem;
+}
+
+.nav a:hover {
+  background: #ddd;
+}
+
+.small {
+  margin-top: 15rem;
+}
+
+.nav-sub a {
+  text-decoration: none;
+  display: block;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+
+/* リンクに下線を追加 */
+.nav a.underline {
+  display: block;              /* ブロック要素にすることで幅いっぱいに */
+  border-bottom: 0.2rem solid #333; /* 下線の太さと色を指定 */
+  padding-bottom: 0.5rem;      /* 下線との間隔を調整（任意） */
+  font-size: 3rem;
+  pointer-events: none;
+}
+
+.nav::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+/* メニュースクロール */
+.nav::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 0.4rem;
+}
+
+/* メニュースクロールの残り部分 */
+.nav::-webkit-scrollbar-track {
+  background-color: #f4f4f4;
+}
+
+main {
+  display: flex;
+}
+
+.item_photo {
+  margin: 14.85rem 5rem;
+  margin-right: 9rem;
+  width: 450px;
+  height: 450px;
+  overflow: visible;
+}
+
+.item_photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#mainImage {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.subImage {
+  display: flex;
+  gap: 10px;
+}
+
+.subImage img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.subImage img:hover {
+  border-color: #333;
+}
+
+.item_text {
+  max-width: 600px;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  margin-top: 12rem;
+}
+
+.item_spec {
+  text-align: right;
+  line-height: 0.5;
+}
+
+.price {
+  font-size: 2.5rem;
+}
+

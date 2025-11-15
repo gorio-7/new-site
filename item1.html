@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,">
+    <title>トップページ</title>
+    <link rel="stylesheet" href="item.css">
+  </head>
+
+  <body>
+    <header class="fixed-header">
+      <h1 class="site-title">
+      <img src="Photo/logo.png" alt="ロゴ" class="logo">
+      </h1>
+
+      <!-- ハンバーガーメニュー -->
+      <div class="right-icons"> 
+      <input type="checkbox" id="menu" class="menu">
+      <label for="menu" class="menu-label">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="nav">
+        <div class="nav-main">
+          <a href="#about-trahearce" class="space">About</a>
+          <a href="#topic">Topic</a>
+          <a href="#products">Products</a>
+          <a href="#about-trampoline">Column</a>
+          <a href="#place-trampoline">Kansai trampolines</a>
+        </div>
+
+        <div class="nav-sub">
+        <a href="#information" class="small">contact</a>
+        <a href="#help" class="small-link">FAQ</a>
+        <a href="#privacy" class="small-link">privacy policy</a>                        
+        <a href="online shop.html" class="small-link">online shop</a>
+        </div>
+      </nav>
+      </div>
+    </header>
+
+    <main>
+        <section class="item_photo">
+            <img id="mainImage" src="Photo/image.png" alt="商品写真">
+
+            <div class="subImage">
+                <img src="Photo/bag1.jpg" onclick="ChangeImage(this)">
+                <img src="Photo/bag2.jpg" onclick="ChangeImage(this)">
+                <img src="Photo/bag3.jpg" onclick="ChangeImage(this)">
+            </div>
+        </section>
+
+        <section class="item_text">
+            <h1>Straight jump</h1>
+                <div class="item_spec">
+                    <p>W300 x H200 x D100</p>
+                    <p class="price">￥2500</p>
+                </div>
+        <p>
+            軽量で耐久性に優れた素材を使用。<br>
+            収納力が高く、日常使いから旅行まで幅広く活躍します。<br>
+            カラーバリエーションも豊富で、あなたのスタイルにぴったりの一品です。
+        </p>
+        </section>        
+    </main>
+    <script src="item.js"></script>
+
+  </body>
