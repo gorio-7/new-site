@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,">
+    <title>Straight jump</title>
+    <link rel="stylesheet" href="item.css">
+  </head>
+
+  <body>
+    <header class="fixed-header">
+      <h1 class="site-title">
+      <img src="Photo/logo.png" alt="ロゴ" class="logo">
+      <span class="site-name">Online shop</span>
+      </h1>
+
+      <!-- ハンバーガーメニュー -->
+      <div class="right-icons"> 
+        <img src="Photo/user.png" alt="マイページ" class="user-icon">
+        <img src="Photo/cart.png" alt="カート" class="cart-icon">
+
+      <input type="checkbox" id="menu" class="menu">
+      <label for="menu" class="menu-label">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="nav">
+        <div class="nav-main">
+          <a href="#products" class="space_top">Products</a>
+          <a href="#about-trampoline">About trahearce</a>
+          <a href="#place-trampoline">Purchase bonus</a>
+          <a href="#place-trampoline">Column</a>
+        </div>
+
+        <div class="nav-sub">
+        <a href="#information" class="small">contact</a>
+        <a href="#help" class="small-link">FAQ</a>
+        <a href="#privacy" class="small-link">privacy policy</a>                        
+        <a href="index.html" class="small-link">my page</a>
+        </div>
+      </nav>
+      </div>
+    </header>
+
+    <main>
+        <section class="item_photo">
+            <img id="mainImage" src="Photo/image.png" alt="商品写真">
+
+            <div class="subImage">
+                <img src="Photo/bag1.jpg" onclick="ChangeImage(this)">
+                <img src="Photo/bag2.jpg" onclick="ChangeImage(this)">
+                <img src="Photo/bag3.jpg" onclick="ChangeImage(this)">
+            </div>
+        </section>
+
+        <section class="item_text">
+            <h1>Straight jump</h1>
+                <div class="item_spec">
+                    <p>W300 × H200 × D100</p>
+                    <h2 class="price">￥2500</h2>
+                </div>
+                <p>英名：ストレートジャンプ</p>
+                <p>和名：垂直跳び</p>
+                <p>通称：ジャンプ　ストレート</p>
+                <p class="space">難度：0.0</p>
+            <p class="item_explanation">
+                基本中の基本技、ストレートジャンプ。
+                まっすぐ上に跳ぶだけ、でもそれが意外と難しい。
+                踏み方のコツは、足の裏全体を使って、まっすぐ踏み込むこと。
+                そして、跳び出しと同時に腕をまっすぐ耳の横まで振り上げます。
+                空中では、全身が伸びた美しい姿勢を目指しましょう。
+                止まる時は、ベッドに沈み込んだ後、膝を曲げて跳ね上がる力を吸収します。
+                どんな技をする際も、ピタッと着地できると完成度がグッと上がります。
+            </p>
+            <hr style="border: none; border-top: 3px dashed #333;">
+      <div class="product">
+        <div class="counter">
+          <button class="minus">-</button>
+           <input type="text" value="1" class="count" readonly>
+            <button class="plus">+</button>
+        </div>
+          <button class="cart">カートに入れる</button>
+      </div>
+
+
+        </section>
+        
+    </main>
+    <script src="item.js"></script>
+
+  </body>
