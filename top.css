@@ -450,6 +450,7 @@ footer {
 }
 
 .image-row {
+  clear: both;
   display: grid;
   gap: 0rem; /* 画像の間隔 */
   justify-items: center; /* 各アイテムを中央に */
@@ -618,4 +619,5 @@ figure {
   font-size: 1.4rem;
   color: #333;
   margin-top: 9rem; /* 上のセクションとの余白 */
+
 }
