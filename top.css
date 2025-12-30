@@ -11,20 +11,26 @@ body {
   overflow-x: hidden;
 }
 
+
+/*　削除予定
+
 header {
-  border-bottom: 0.35rem solid #c9c9c9; /* 薄いグレーの線 */
-  padding-bottom: 1rem;          /* 下に少し余白 */
-  margin-bottom: 1rem;           /* 本文との間隔 */
+  border-bottom: 0.35rem solid #c9c9c9; /* 薄いグレーの線 
+  padding-bottom: 1rem;          /* 下に少し余白 
+  margin-bottom: 1rem;           /* 本文との間隔 
 }
 
 footer {
-  border-top: 0.35rem solid #c9c9c9; /* 薄いグレーの線 */
-  padding-top: 1rem;          /* 下に少し余白 */
-  margin-top: 1rem;           /* 本文との間隔 */
+  border-top: 0.35rem solid #c9c9c9; /* 薄いグレーの線 
+  padding-top: 1rem;          /* 下に少し余白 
+  margin-top: 1rem;           /* 本文との間隔 
   width: 100%;
   margin: 0 auto;
   max-width: 100%;
 }
+
+*/
+
 
  /* 画像のはみ出し防止 */
   img {
@@ -113,6 +119,8 @@ footer {
   padding: 0 3rem;
   z-index: 998;
   overflow-y: auto; /* スクロール対応を追加 */
+  font-family: Arial, sans-serif;
+  font-weight: bold;
 }
 
 /* メニュー表示時 */
@@ -213,18 +221,6 @@ footer {
   border-bottom-right-radius: 40px;/* 右下を丸く */
 }
 
-.topic {
-  display: inline-block;
-  padding: 1rem 7rem;
-  margin-top: 4rem;
-  font-size: 2.5rem;
-  color: #3EB370;
-  background-color: #FFFFFF; /* 緑のバー */
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  border-top-right-radius: 40px;   /* 右上を丸く */
-  border-bottom-right-radius: 40px;/* 右下を丸く */
-}
 
 .about-setting {
   color: #3EB370;
@@ -256,7 +252,7 @@ footer {
 
 .about-c {
   font-size: 2.5rem;
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 .image-2 {
@@ -274,11 +270,13 @@ footer {
   width: 40%;
   height: auto;
   align-self: center; 
+  margin-right: 3rem;
 }
 
 .brand-set {
   display: flex;
   flex-direction: column; /* テキストを縦積み */
+  font-family: monospace;
   color: #3EB370;
 }
 
@@ -293,6 +291,19 @@ footer {
   margin-top: 0;
 }
 
+.topic {
+  display: inline-block;
+  padding: 1rem 7rem;
+  margin-top: 4rem;
+  font-size: 2.5rem;
+  color: #3EB370;
+  background-color: #FFFFFF; /* 緑のバー */
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  border-top-right-radius: 40px;   /* 右上を丸く */
+  border-bottom-right-radius: 40px;/* 右下を丸く */
+}
+
 .topic-wrapper {
   display: flex;
   align-items: flex-start;
@@ -305,7 +316,7 @@ footer {
 .topic-list {
   list-style-type: disc;
   list-style-position: inside;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #FFFFFF;
   margin: 0;
   padding: 5rem 0 5rem 3rem;
@@ -355,7 +366,8 @@ footer {
 
 .text h4 {
   margin: 1rem 0 0.5rem;
-  font-size: 1.1em;
+  font-size: 2em;
+  color: #f6ab00;
   font-family: "Yu Gothic", "YuGothic", sans-serif;
   font-weight: 500;
 }
@@ -374,7 +386,7 @@ footer {
   color: #FFFFFF;
   border: none;
   padding: 16px 48px;
-  font-size: 1.5em;
+  font-size: 2em;
   border-radius: 2.5rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -609,6 +621,7 @@ figure {
   width: 30%;
   height: auto;
   margin-right: 10rem;
+  margin-bottom: 10rem;
 }
 
 /* フッター */
@@ -617,6 +630,8 @@ figure {
   height: 30rem;
   padding: 3rem 4rem 0 2rem;
   text-align: left;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
 }
 
 .footer-links,
