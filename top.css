@@ -561,6 +561,7 @@ figure {
   cursor: pointer;
   font-size: 1.4rem;
   font-weight: bold;
+  font-family: "Yu Gothic", "YuGothic", sans-serif;
   box-shadow: 0 0.2rem 0.6rem rgba(0,0,0,0.1);  /* ラベルの影の色 */
 }
 
