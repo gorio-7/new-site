@@ -597,6 +597,7 @@ figure {
 .label {
   font-size: 1.4rem;
   font-weight: bold;
+  font-family: "Yu Gothic", "YuGothic", sans-serif;
   color: #333;
   margin-top: 0.6rem;
 }
