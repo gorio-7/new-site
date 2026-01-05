@@ -16,13 +16,13 @@ main {
 }
 
 header {
-  border-bottom: 0.35rem solid #3EB370; /* 薄いグレーの線 */
+  border-bottom: 0.35rem solid #3EB370; /* 緑の線 */
   padding-bottom: 1rem;          /* 下に少し余白 */
   margin-bottom: 1rem;           /* 本文との間隔 */
 }
 
 footer {
-  border-top: 0.35rem solid #3EB370; /* 薄いグレーの線 */ 
+  border-top: 0.35rem solid #3EB370; /* 緑の線 */ 
   padding-top: 1rem;          /* 下に少し余白 */
   margin-top: 1rem;           /* 本文との間隔 */
   width: 100%;
@@ -373,8 +373,8 @@ figure {
   margin: 1rem 0 0.5rem;
   font-size: 2em;
   color: #f6ab00;
-  font-family: "Yu Gothic", "YuGothic", sans-serif;
-  font-weight: 500;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
 }
 
 /* オンラインショップボタン */
