@@ -106,7 +106,7 @@ footer {
 }
 
 .menu-label span {
-  background: #333;
+  background: #3EB370;
   height: 0.2rem;
   width: 100%;
   transition: 0.3s; /*×に切り替わるスピード*/
@@ -240,8 +240,11 @@ main {
   border: 2px solid transparent;
 }
 
-.subImage img:hover,
-.subImage img:first-child {
+.subImage img.active { 
+  border-color: #333 ; 
+}
+
+.subImage img:hover {
   border-color: #333;
 }
 
